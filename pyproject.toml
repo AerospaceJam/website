@@ -1,0 +1,12 @@
+[project]
+name = "website"
+version = "0.1.0"
+description = "Aerospace Jam Official Site"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "markdown>=3.7",
+    "python-frontmatter>=1.1.0",
+    "staticjinja>=5.0.0",
+    "watchdog>=6.0.0",
+]

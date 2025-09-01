@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerospace Jam | High School Robotics Competition</title>
+    <meta name="description" content="Aerospace Jam is the premier high school robotics competition focused on the challenges of space exploration and aeronautics. Build, code, and compete!">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Poppins) for a modern feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply the custom font */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Style for FAQ accordions */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-800">
+                🚀 Aerospace Jam
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors">About</a>
+                <a href="#details" class="text-gray-600 hover:text-green-600 transition-colors">Details</a>
+                <a href="#schedule" class="text-gray-600 hover:text-green-600 transition-colors">Schedule</a>
+                <a href="#faq" class="text-gray-600 hover:text-green-600 transition-colors">FAQ</a>
+            </nav>
+            <a href="#register" class="bg-green-600 text-white font-bold py-2 px-5 rounded-full hover:bg-green-700 transition-transform hover:scale-105">
+                Register Now
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="relative h-[80vh] min-h-[500px] flex items-center justify-center text-white text-center px-6">
+            <div class="absolute inset-0 bg-green-900 opacity-60"></div>
+            <!-- TODO: Replace with a high-quality background image of robotics or space -->
+            <img src="https://images.unsplash.com/photo-1614728263952-84ea256ec346?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Aerospace robotics background" class="absolute inset-0 w-full h-full object-cover">
+            
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">Build the Future of Flight</h1>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
+                    Join the most exciting high school robotics competition where you'll tackle real-world aerospace challenges, from Martian rovers to orbital mechanics.
+                </p>
+                <div class="mt-8 space-x-4">
+                    <a href="#register" class="bg-green-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-green-600 transition-transform hover:scale-105">
+                        Register Your Team
+                    </a>
+                    <a href="#about" class="bg-white/20 backdrop-blur-sm text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-white/30 transition-colors">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800">What is Aerospace Jam?</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">A hands-on competition designed to inspire the next generation of engineers, programmers, and innovators.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- TODO: Replace with a photo of students working on a robot -->
+                        <img src="https://images.unsplash.com/photo-1581092921462-2b7e283a516b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Students building a robot" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                    <div class="text-gray-700 space-y-4 text-lg">
+                        <p><strong>Aerospace Jam</strong> challenges high school teams to design, build, and program a robot to solve a complex problem inspired by current aerospace missions. This year's theme is <strong class="text-green-700">"Martian Soil Collection"</strong>.</p>
+                        <p>Teams will compete in a dynamic arena, simulating the harsh and unpredictable environment of the Red Planet. It's not just about winning; it's about problem-solving, collaboration, and pushing the boundaries of what's possible with technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Participate Section -->
+        <section id="why" class="py-20 bg-green-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800">Why Participate?</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Gain invaluable skills, meet industry mentors, and have an unforgettable experience.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <div class="inline-block bg-green-100 text-green-600 rounded-full p-4 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Real-World Skills</h3>
+                        <p class="text-gray-600">Develop your coding, engineering, and design skills by working on a project with real-world applications.</p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <div class="inline-block bg-green-100 text-green-600 rounded-full p-4 mb-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Teamwork & Collaboration</h3>
+                        <p class="text-gray-600">Learn to work effectively in a team, manage a project, and communicate complex ideas with your peers.</p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all">
+                        <div class="inline-block bg-green-100 text-green-600 rounded-full p-4 mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-12v4m-2-2h4m5 4v4m-2-2h4M17 3l4 4M3 17l4 4" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Industry Connections</h3>
+                        <p class="text-gray-600">Network with professional engineers and recruiters from leading aerospace and tech companies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Event Details & Schedule -->
+        <section id="details" class="py-20 bg-white">
+            <div class="container mx-auto px-6 grid lg:grid-cols-5 gap-12">
+                <!-- Details -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-green-800 mb-6">Event Details</h2>
+                    <div class="space-y-4 text-lg">
+                        <div class="flex items-start">
+                            <span class="text-green-600 mr-3 mt-1">🗓️</span>
+                            <div>
+                                <h4 class="font-bold">Date</h4>
+                                <!-- TODO: Update the date -->
+                                <p class="text-gray-600">October 26, 2024</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-600 mr-3 mt-1">📍</span>
+                            <div>
+                                <h4 class="font-bold">Location</h4>
+                                <!-- TODO: Update the location -->
+                                <p class="text-gray-600">Innovation Tech Center, 123 Launchpad Ave, Cape Canaveral, FL</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-600 mr-3 mt-1">👥</span>
+                            <div>
+                                <h4 class="font-bold">Who Can Participate?</h4>
+                                <p class="text-gray-600">Teams of 3-5 students from any high school.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Schedule -->
+                <div id="schedule" class="lg:col-span-3">
+                    <h2 class="text-3xl font-bold text-green-800 mb-6">Competition Day Schedule</h2>
+                    <ul class="border-l-2 border-green-200 space-y-8 pl-8">
+                        <li>
+                            <div class="font-bold">8:00 AM - Team Check-in & Pit Setup</div>
+                            <p class="text-gray-600">Get your station ready and pass robot inspection.</p>
+                        </li>
+                        <li>
+                            <div class="font-bold">9:00 AM - Opening Ceremony</div>
+                            <p class="text-gray-600">Welcome address and final game rule clarifications.</p>
+                        </li>
+                        <li>
+                            <div class="font-bold">9:30 AM - Qualification Matches Begin</div>
+                            <p class="text-gray-600">The action kicks off! Teams compete in a series of rounds.</p>
+                        </li>
+                         <li>
+                            <div class="font-bold">12:30 PM - Lunch Break & Mentor Meetings</div>
+                            <p class="text-gray-600">Refuel and get advice from industry professionals.</p>
+                        </li>
+                        <li>
+                            <div class="font-bold">2:00 PM - Alliance Selection & Finals</div>
+                            <p class="text-gray-600">Top teams form alliances for the championship bracket.</p>
+                        </li>
+                        <li>
+                            <div class="font-bold">4:30 PM - Awards Ceremony</div>
+                            <p class="text-gray-600">Celebrating the winners and outstanding achievements.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-green-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4">
+                    <details class="bg-white p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                            What is the maximum team size?
+                            <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">
+                            Teams can have a minimum of 3 and a maximum of 5 student members, plus one adult mentor (teacher or parent).
+                        </p>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                            Is there a specific robotics kit we need to use?
+                            <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">
+                            No! Aerospace Jam is platform-agnostic. You can use any kit (VEX, REV, LEGO, etc.) or build from scratch, as long as your robot complies with the size, weight, and material constraints outlined in the official game manual.
+                        </p>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                            What is the registration fee?
+                            <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">
+                            <!-- TODO: Update registration fee -->
+                            The registration fee is $150 per team, which covers event entry, a team lunch, and a T-shirt for each member. Fee waivers are available for qualifying teams—please contact us for more information.
+                        </p>
+                    </details>
+                     <details class="bg-white p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                            Where can I find the game manual and rules?
+                            <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">
+                            <!-- TODO: Add link to rules PDF -->
+                            The full game manual, including robot rules and scoring details, will be released on our website on September 1st. A link will be available right here.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="register" class="py-20 bg-green-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold">Ready to Launch Your Team?</h2>
+                 <p class="mt-4 text-lg text-green-200 max-w-2xl mx-auto">
+                    Registration is now open! Secure your spot and start building the future of aerospace technology today.
+                 </p>
+                 <div class="mt-8">
+                     <!-- TODO: Update this link to your registration form (e.g., Google Form, Eventbrite) -->
+                    <a href="#" class="bg-white text-green-800 font-bold py-4 px-10 rounded-full text-xl hover:bg-green-100 transition-transform hover:scale-105 inline-block">
+                        Register Now
+                    </a>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Aerospace Jam. All Rights Reserved.</p>
+            <div class="mt-4">
+                <!-- TODO: Update with your contact email -->
+                <p>Questions? <a href="mailto:contact@aerospacejam.org" class="text-green-400 hover:underline">contact@aerospacejam.org</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
