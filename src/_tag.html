@@ -1,20 +1,15 @@
 {% extends "_common.html" %}
 
-{% block title %}Posts in {{ tag }} | Aerospace Jam{% endblock %}
+{% block title %}Posts tagged "{{ tag }}"{% endblock %}
 
 {% block main %}
-
-<h1>All Posts in <kbd>{{ tag }}</kbd></h1>
-{% for post in posts %}
-<div class="postcard">
-    <h3>{{ post.title }}</h3>
-    {% for tag in post.tags %}
-    <a class="tag" href="/posts/tag/{{ tag }}">{{ tag }}</a>
-    {% endfor %}
-    <time>{{ post.date }}</time>
-    <p>{{ post.excerpt }}</p>
-    <a href="{{ post.url }}">Read more</a>
-</div>
-{% endfor %}
-
+    <h2>Posts tagged "{{ tag }}"</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="/posts/{{ post.slug }}">{{ post.title }}</a>
+                <span>{{ post.date }}</span>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
