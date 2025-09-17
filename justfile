@@ -4,7 +4,7 @@ default:
 
 # Build the static site
 build:
-    python build.py
+    uv run build.py
 
 # Install dependencies
 install:
