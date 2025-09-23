@@ -17,10 +17,11 @@
 {% block main %}
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-green-800 flex items-center">
-                <img src="/static/img/logo.png" alt="Aerospace Jam Logo" class="h-12 mr-3"> Aerospace Jam
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl md:text-2xl font-bold text-green-800 flex items-center">
+                <img src="/static/img/logo.png" alt="Aerospace Jam Logo" class="h-10 md:h-12 mr-3"> Aerospace Jam
             </a>
+            <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-8">
                 <a href="/#about" class="text-gray-600 hover:text-green-600 transition-colors">About</a>
                 <a href="/#details" class="text-gray-600 hover:text-green-600 transition-colors">Details</a>
@@ -37,71 +38,71 @@
     <!-- Main Content -->
     <main>
         <!-- Registration Section -->
-        <section class="py-20 bg-green-50">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl md:text-5xl font-bold text-green-800">Register Your Team</h1>
-                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+        <section class="py-12 md:py-20 bg-green-50">
+            <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
+                <div class="text-center mb-10 md:mb-12">
+                    <h1 class="text-3xl md:text-5xl font-bold text-green-800">Register Your Team</h1>
+                    <p class="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
                         Complete the form below to sign up for the Aerospace Jam. We're excited to have you on board for the Mars Sample Return mission!
                     </p>
                 </div>
 
-                <div class="bg-white p-8 md:p-12 rounded-lg shadow-xl">
+                <div class="bg-white p-6 md:p-12 rounded-lg shadow-xl">
                     <!-- IMPORTANT: Replace the action attribute with your Formspree endpoint -->
                     <form action="https://formspree.io/f/xeorjbol" method="POST" class="space-y-8">
                         
                         <!-- Team Information -->
                         <div>
-                            <h2 class="text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6">Team Information</h2>
+                            <h2 class="text-xl md:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6">Team Information</h2>
                             <div class="grid grid-cols-1 gap-6">
                                 <div>
-                                    <label for="team_name" class="block text-lg font-medium text-gray-700">Team Name</label>
-                                    <input type="text" name="team_name" id="team_name" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg" required>
+                                    <label for="team_name" class="block text-base md:text-lg font-medium text-gray-700">Team Name</label>
+                                    <input type="text" name="team_name" id="team_name" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg p-3" required>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Mentor Information -->
                         <div>
-                            <h2 class="text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6">Mentor Information</h2>
+                            <h2 class="text-xl md:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6">Mentor Information</h2>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label for="mentor_name" class="block text-lg font-medium text-gray-700">Full Name</label>
-                                    <input type="text" name="mentor_name" id="mentor_name" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg" required>
+                                    <label for="mentor_name" class="block text-base md:text-lg font-medium text-gray-700">Full Name</label>
+                                    <input type="text" name="mentor_name" id="mentor_name" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg p-3" required>
                                 </div>
                                 <div>
-                                    <label for="mentor_email" class="block text-lg font-medium text-gray-700">Email Address</label>
-                                    <input type="email" name="mentor_email" id="mentor_email" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg" required>
+                                    <label for="mentor_email" class="block text-base md:text-lg font-medium text-gray-700">Email Address</label>
+                                    <input type="email" name="mentor_email" id="mentor_email" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg p-3" required>
                                 </div>
                                 <div>
-                                    <label for="mentor_phone" class="block text-lg font-medium text-gray-700">Phone Number</label>
-                                    <input type="tel" name="mentor_phone" id="mentor_phone" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg">
+                                    <label for="mentor_phone" class="block text-base md:text-lg font-medium text-gray-700">Phone Number</label>
+                                    <input type="tel" name="mentor_phone" id="mentor_phone" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg p-3">
                                 </div>
                                 <div>
-                                    <label for="affiliation" class="block text-lg font-medium text-gray-700">School or Organization</label>
-                                    <input type="text" name="affiliation" id="affiliation" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg">
+                                    <label for="affiliation" class="block text-base md:text-lg font-medium text-gray-700">School or Organization</label>
+                                    <input type="text" name="affiliation" id="affiliation" class="mt-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-lg p-3">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Student Information -->
                         <div>
-                            <h2 class="text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6">Student Members (2-10 students)</h2>
+                            <h2 class="text-xl md:text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-6">Student Members (2-10 students)</h2>
                             <div id="student-members" class="space-y-6">
                                 <!-- Student 1 (Required minimum) -->
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg relative">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-y-4 gap-x-6 p-4 border border-gray-200 rounded-lg relative">
                                     <h3 class="md:col-span-3 text-lg font-bold text-gray-800">Student 1</h3>
                                     <div>
                                         <label for="student_name_1" class="block text-md font-medium text-gray-700">Full Name</label>
-                                        <input type="text" name="student_name_1" id="student_name_1" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                                        <input type="text" name="student_name_1" id="student_name_1" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                                     </div>
                                     <div>
                                         <label for="student_email_1" class="block text-md font-medium text-gray-700">Email Address</label>
-                                        <input type="email" name="student_email_1" id="student_email_1" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                                        <input type="email" name="student_email_1" id="student_email_1" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                                     </div>
                                     <div>
                                         <label for="student_grade_1" class="block text-md font-medium text-gray-700">Grade Level</label>
-                                        <input type="number" name="student_grade_1" id="student_grade_1" min="6" max="12" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                                        <input type="number" name="student_grade_1" id="student_grade_1" min="6" max="12" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                                     </div>
                                     <!-- Remove button (initially hidden, shown if count > MIN_STUDENTS) -->
                                     <button type="button" class="remove-student-btn absolute top-2 right-2 p-2 rounded-full bg-red-100 text-red-600 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2" style="display: none;">
@@ -112,19 +113,19 @@
                                     </button>
                                 </div>
                                 <!-- Student 2 (Required minimum) -->
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg relative">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-y-4 gap-x-6 p-4 border border-gray-200 rounded-lg relative">
                                     <h3 class="md:col-span-3 text-lg font-bold text-gray-800">Student 2</h3>
                                     <div>
                                         <label for="student_name_2" class="block text-md font-medium text-gray-700">Full Name</label>
-                                        <input type="text" name="student_name_2" id="student_name_2" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                                        <input type="text" name="student_name_2" id="student_name_2" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                                     </div>
                                     <div>
                                         <label for="student_email_2" class="block text-md font-medium text-gray-700">Email Address</label>
-                                        <input type="email" name="student_email_2" id="student_email_2" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                                        <input type="email" name="student_email_2" id="student_email_2" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                                     </div>
                                     <div>
                                         <label for="student_grade_2" class="block text-md font-medium text-gray-700">Grade Level</label>
-                                        <input type="number" name="student_grade_2" id="student_grade_2" min="6" max="12" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                                        <input type="number" name="student_grade_2" id="student_grade_2" min="6" max="12" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                                     </div>
                                     <!-- Remove button (initially hidden, shown if count > MIN_STUDENTS) -->
                                     <button type="button" class="remove-student-btn absolute top-2 right-2 p-2 rounded-full bg-red-100 text-red-600 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2" style="display: none;">
@@ -135,7 +136,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <button type="button" id="add-student" class="mt-6 bg-green-100 text-green-800 font-bold py-2 px-4 rounded-lg hover:bg-green-200 transition-colors">
+                            <button type="button" id="add-student" class="mt-6 bg-green-100 text-green-800 font-bold py-2 px-4 rounded-lg hover:bg-green-200 transition-colors w-full sm:w-auto">
                                 + Add Another Student (Up to 10)
                             </button>
                         </div>
@@ -146,14 +147,14 @@
                                 <div class="flex items-center h-5">
                                 <input id="terms" name="terms" type="checkbox" class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded" required>
                                 </div>
-                                <div class="ml-3 text-lg">
+                                <div class="ml-3 text-base md:text-lg">
                                 <label for="terms" class="font-medium text-gray-700">I have read and agree to the competition <a href="https://docs.aerospacejam.org/" target="_blank" class="text-green-600 hover:underline">rules and guidelines</a>.</label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="text-center">
-                            <button type="submit" class="bg-green-600 text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-green-700 transition-transform hover:scale-105 inline-block">
+                        <div class="text-center pt-4">
+                            <button type="submit" class="w-full sm:w-auto bg-green-600 text-white font-bold py-3 px-8 md:py-4 md:px-12 rounded-full text-lg md:text-xl hover:bg-green-700 transition-transform hover:scale-105 inline-block">
                                 Submit Registration
                             </button>
                         </div>
@@ -166,9 +167,9 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400">
-        <div class="container mx-auto px-6 py-8 text-center">
+        <div class="container mx-auto px-4 sm:px-6 py-8 text-center">
             <p>&copy; 2024 Aerospace Jam. All Rights Reserved.</p>
-            <div class="mt-4">
+            <div class="mt-4 text-sm">
                 <p>Questions? <a href="mailto:mmortens@carrollu.edu" class="text-green-400 hover:underline">mmortens@carrollu.edu</a> or <a href="mailto:henrymartin.co@outlook.com" class="text-green-400 hover:underline">henrymartin.co@outlook.com</a></p>
                 <p class="mt-2">Join our <a href="https://discord.com/invite/ShsPVMzpyW" target="_blank" class="text-green-400 hover:underline">Discord community</a></p>
             </div>
@@ -217,20 +218,20 @@
                 const newStudentIndex = currentStudentCount + 1; // Visual index for the new student
 
                 const newStudentBlock = document.createElement('div');
-                newStudentBlock.className = 'grid grid-cols-1 md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg relative';
+                newStudentBlock.className = 'grid grid-cols-1 md:grid-cols-3 gap-y-4 gap-x-6 p-4 border border-gray-200 rounded-lg relative';
                 newStudentBlock.innerHTML = `
                     <h3 class="md:col-span-3 text-lg font-bold text-gray-800">Student ${newStudentIndex}</h3>
                     <div>
                         <label for="student_name_${newStudentIndex}" class="block text-md font-medium text-gray-700">Full Name</label>
-                        <input type="text" name="student_name_${newStudentIndex}" id="student_name_${newStudentIndex}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                        <input type="text" name="student_name_${newStudentIndex}" id="student_name_${newStudentIndex}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                     </div>
                     <div>
                         <label for="student_email_${newStudentIndex}" class="block text-md font-medium text-gray-700">Email Address</label>
-                        <input type="email" name="student_email_${newStudentIndex}" id="student_email_${newStudentIndex}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                        <input type="email" name="student_email_${newStudentIndex}" id="student_email_${newStudentIndex}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                     </div>
                     <div>
                         <label for="student_grade_${newStudentIndex}" class="block text-md font-medium text-gray-700">Grade Level</label>
-                        <input type="number" name="student_grade_${newStudentIndex}" id="student_grade_${newStudentIndex}" min="6" max="12" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
+                        <input type="number" name="student_grade_${newStudentIndex}" id="student_grade_${newStudentIndex}" min="6" max="12" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 p-2" required>
                     </div>
                     <button type="button" class="remove-student-btn absolute top-2 right-2 p-2 rounded-full bg-red-100 text-red-600 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
                         <span class="sr-only">Remove student</span>
@@ -267,4 +268,19 @@
             updateStudentUI(); // Initial UI update
         });
     </script>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
 {% endblock %}

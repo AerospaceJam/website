@@ -17,10 +17,11 @@
 {% block main %}
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-green-800 flex items-center">
-                <img src="/static/img/logo.png" alt="Aerospace Jam Logo" class="h-12 mr-3"> Aerospace Jam
+                <img src="/static/img/logo.png" alt="Aerospace Jam Logo" class="h-10 md:h-12 mr-3"> Aerospace Jam
             </a>
+            <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors">About</a>
                 <a href="#details" class="text-gray-600 hover:text-green-600 transition-colors">Details</a>
@@ -28,7 +29,26 @@
                 <a href="#faq" class="text-gray-600 hover:text-green-600 transition-colors">FAQ</a>
                 <a href="https://discord.com/invite/ShsPVMzpyW" target="_blank" class="text-gray-600 hover:text-green-600 transition-colors">Discord</a>
             </nav>
-            <a href="/register" class="bg-green-600 text-white font-bold py-2 px-5 rounded-full hover:bg-green-700 transition-transform hover:scale-105">
+            <a href="/register" class="hidden md:inline-block bg-green-600 text-white font-bold py-2 px-5 rounded-full hover:bg-green-700 transition-transform hover:scale-105">
+                Register Now
+            </a>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-green-800 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg">
+            <a href="#about" class="block text-gray-700 py-3 px-4 hover:bg-green-50">About</a>
+            <a href="#details" class="block text-gray-700 py-3 px-4 hover:bg-green-50">Details</a>
+            <a href="#schedule" class="block text-gray-700 py-3 px-4 hover:bg-green-50">Schedule</a>
+            <a href="#faq" class="block text-gray-700 py-3 px-4 hover:bg-green-50">FAQ</a>
+            <a href="https://discord.com/invite/ShsPVMzpyW" target="_blank" class="block text-gray-700 py-3 px-4 hover:bg-green-50">Discord</a>
+            <a href="/register" class="block bg-green-600 text-white font-bold text-center mx-4 my-3 py-2 px-5 rounded-full hover:bg-green-700">
                 Register Now
             </a>
         </div>
@@ -38,20 +58,20 @@
     <main>
 
         <!-- Hero Section -->
-        <section class="relative h-[80vh] min-h-[500px] flex items-center justify-start text-white text-left px-6">
+        <section class="relative h-[90vh] max-h-[600px] md:h-[80vh] flex items-center justify-start text-white text-left px-4 sm:px-6">
             <div class="absolute inset-0 bg-green-900 opacity-60"></div>
             <img src="/static/img/aerospace-jam-banner-1300x400.jpg" alt="Aerospace jam competition" class="absolute inset-0 w-full h-full object-cover" style="object-position: 40% center;">
             
-            <div class="relative z-10 bg-gray-900/70 backdrop-blur-sm p-8 rounded-lg">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">Build the Future of Flight</h1>
-                <p class="mt-4 text-lg md:text-xl max-w-3xl drop-shadow-md">
+            <div class="relative z-10 bg-gray-900/70 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">Build the Future of Flight</h1>
+                <p class="mt-4 text-base md:text-xl max-w-3xl drop-shadow-md">
                     Join the NASA-sponsored high school robotics competition where you'll tackle real-world aerospace challenges with drones, completely free for all teams!
                 </p>
-                <div class="mt-8 space-x-4">
-                    <a href="https://docs.aerospacejam.org/" class="bg-green-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-green-600 transition-transform hover:scale-105">
+                <div class="mt-6 md:mt-8 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                    <a href="https://docs.aerospacejam.org/" class="bg-green-500 text-white font-bold py-3 px-6 sm:px-8 rounded-full text-base md:text-lg hover:bg-green-600 transition-transform hover:scale-105 text-center">
                         Read the docs
                     </a>
-                    <a href="#about" class="bg-white/20 backdrop-blur-sm text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-white/30 transition-colors">
+                    <a href="#about" class="bg-white/20 backdrop-blur-sm text-white font-bold py-3 px-6 sm:px-8 rounded-full text-base md:text-lg hover:bg-white/30 transition-colors text-center">
                         Learn more
                     </a>
                 </div>
@@ -59,17 +79,17 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+        <section id="about" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-green-800">What is Aerospace Jam?</h2>
-                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Aerospace Jam is a competition for high school teams across Wisconsin to use drones on a NASA-inspired simulated Lunar mission. The program is co-sponsored by the NASA Wisconsin Space Grant Consortium and the Milwaukee Bucks. Our goal is to recruit students from diverse backgrounds and cultivate a welcoming and inclusive event that will foster meaningful interactions among teammates and teams.</p>
+                    <p class="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto">Aerospace Jam is a competition for high school teams across Wisconsin to use drones on a NASA-inspired simulated Lunar mission. The program is co-sponsored by the NASA Wisconsin Space Grant Consortium and the Milwaukee Bucks. Our goal is to recruit students from diverse backgrounds and cultivate a welcoming and inclusive event that will foster meaningful interactions among teammates and teams.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <img src="/static/img/aerospace-jam-600x600.jpg" alt="Students flying a drone in a test harness" class="rounded-lg shadow-xl w-sm h-auto">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="text-center">
+                        <img src="/static/img/aerospace-jam-600x600.jpg" alt="Students flying a drone in a test harness" class="rounded-lg shadow-xl w-full max-w-sm mx-auto h-auto">
                     </div>
-                    <div class="text-gray-700 space-y-4 text-lg">
+                    <div class="text-gray-700 space-y-4 text-base md:text-lg">
                         <p><strong>Aerospace Jam</strong> is a drone competition that challenges high school teams to solve problems inspired by NASA's real-life missions. This year's theme is <strong class="text-green-700">"Mars Sample Return"</strong>.</p>
                         <p>The competition features a variety of challenges with multiple difficulty levels, ensuring that both new and experienced teams can find a suitable challenge to feel accomplished. It's not just about winning; it's about problem-solving, collaboration, and pushing the boundaries of what's possible with technology.</p>
                         <p>For in-depth information on the current competition season, please <a href="https://docs.aerospacejam.org/" class="text-green-600 hover:underline">read the docs</a>. You can also find more about the competition <a href="#details" class="text-green-600 hover:underline">details</a>, the full event <a href="#schedule" class="text-green-600 hover:underline">schedule</a>, and answers to <a href="#faq" class="text-green-600 hover:underline">frequently asked questions</a>. We can't wait to see what you'll build!</p>
@@ -79,13 +99,13 @@
         </section>
 
         <!-- Why Participate Section -->
-        <section id="why" class="py-20 bg-green-50">
-            <div class="container mx-auto px-6">
+        <section id="why" class="py-16 md:py-20 bg-green-50">
+            <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-green-800">Why Participate?</h2>
-                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Gain invaluable skills, meet industry mentors, and have an unforgettable experience.</p>
+                    <p class="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto">Gain invaluable skills, meet industry mentors, and have an unforgettable experience.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all">
                         <div class="inline-block bg-green-100 text-green-600 rounded-full p-4 mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
@@ -123,32 +143,32 @@
         </section>
 
         <!-- Sponsors Section -->
-        <section id="sponsors" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+        <section id="sponsors" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-green-800">Our Sponsors</h2>
                 </div>
-                <div class="flex justify-center items-center gap-12 flex-wrap">
+                <div class="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
                     <div class="text-center">
-                        <img src="/static/img/NASA_Partner.png" alt="NASA Logo" class="w-40 h-40 object-cover rounded-lg">
+                        <img src="/static/img/NASA_Partner.png" alt="NASA Logo" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg">
                     </div>
                     <div class="text-center">
-                        <img src="/static/img/milwaukee-bucks-logo.jpg" alt="Milwaukee Bucks Logo" class="w-40 h-40 object-cover rounded-lg">
+                        <img src="/static/img/milwaukee-bucks-logo.jpg" alt="Milwaukee Bucks Logo" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg">
                     </div>
                     <div class="text-center">
-                        <img src="/static/img/wsgc-logo-round-black.jpg" alt="WSGC Logo" class="w-40 h-40 object-cover rounded-lg">
+                        <img src="/static/img/wsgc-logo-round-black.jpg" alt="WSGC Logo" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg">
                     </div>
                 </div>
             </div>
         </section>
         
         <!-- Event Details & Schedule -->
-        <section id="details" class="py-20 bg-white">
-            <div class="container mx-auto px-6 flex justify-center gap-12">
+        <section id="details" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-center gap-12">
                 <!-- Details -->
-                <div>
+                <div class="w-full md:w-auto">
                     <h2 class="text-3xl font-bold text-green-800 mb-6">Event Details</h2>
-                    <div class="space-y-4 text-lg">
+                    <div class="space-y-4 text-base md:text-lg">
                         <div class="flex items-start">
                             <span class="text-green-600 mr-3 mt-1">🗓️</span>
                             <div>
@@ -173,98 +193,112 @@
                     </div>
                 </div>
                 <!-- Schedule -->
-                <div id="schedule">
+                <div id="schedule" class="w-full md:w-auto">
                     <h2 class="text-3xl font-bold text-green-800 mb-6">Competition Day Schedule</h2>
-                    <p class="text-center text-lg text-gray-600">Coming soon!</p>
+                    <p class="text-lg text-gray-600">Coming soon!</p>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="py-20 bg-green-50">
-            <div class="container mx-auto px-6 max-w-4xl">
+        <section id="faq" class="py-16 md:py-20 bg-green-50">
+            <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-green-800">Frequently Asked Questions</h2>
                 </div>
                 <div class="space-y-4">
-                    <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                    <details class="bg-white p-4 md:p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-base md:text-lg cursor-pointer flex justify-between items-center">
                             What is the maximum team size?
                             <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
                         </summary>
-                        <p class="mt-4 text-gray-600">
+                        <p class="mt-4 text-gray-600 text-sm md:text-base">
                             Teams can have a minimum of 2 and a maximum of 10 student members, plus one adult mentor (teacher or parent).
                         </p>
                     </details>
-                    <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                    <details class="bg-white p-4 md:p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-base md:text-lg cursor-pointer flex justify-between items-center">
                             Are there any restrictions on the hardware we can use?
                             <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
                         </summary>
-                        <p class="mt-4 text-gray-600">
+                        <p class="mt-4 text-gray-600 text-sm md:text-base">
                             For the core sensor kit, you must use the parts we provide. We do this to ensure a level playing field for all teams. If any of your provided parts are not working, we will provide replacements, but you must use the official parts. For all other non-sensor and challenge-related aspects of your drone, you are free to use any hardware you like, as long as it complies with the safety and size constraints in the documentation.
                         </p>
                     </details>
-                    <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                    <details class="bg-white p-4 md:p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-base md:text-lg cursor-pointer flex justify-between items-center">
                             What is the registration fee?
                             <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
                         </summary>
-                        <p class="mt-4 text-gray-600">
+                        <p class="mt-4 text-gray-600 text-sm md:text-base">
                             There is none! Aerospace Jam is 100% for all teams and mentors involved, and is fully funded by WSGC and industry grants.
                         </p>
                     </details>
-                    <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                    <details class="bg-white p-4 md:p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-base md:text-lg cursor-pointer flex justify-between items-center">
                             Where can I find the documentation?
                             <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
                         </summary>
-                        <p class="mt-4 text-gray-600">
+                        <p class="mt-4 text-gray-600 text-sm md:text-base">
                             All information about the competition, including rules and scoring, can be found in our documentation. A link will be available here on September 1st.
                         </p>
                     </details>
-                    <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+                    <details class="bg-white p-4 md:p-6 rounded-lg shadow-sm group">
+                        <summary class="font-bold text-base md:text-lg cursor-pointer flex justify-between items-center">
                             Can multiple teams share a mentor?
                             <span class="text-green-500 transform group-open:rotate-45 transition-transform">+</span>
                         </summary>
-                        <p class="mt-4 text-gray-600">
+                        <p class="mt-4 text-gray-600 text-sm md:text-base">
                             Yes! A single adult mentor can have up to 5 teams under them, to accommodate high schools or community organizations with lots of students.
                         </p>
                     </details>
                 </div>
-                <p class="mt-8 text-center text-lg text-gray-600">Any other questions? Consult the <a href="https://docs.aerospacejam.org/" class="text-green-600 hover:underline">documentation</a>.</p>
+                <p class="mt-8 text-center text-base md:text-lg text-gray-600">Any other questions? Consult the <a href="https://docs.aerospacejam.org/" class="text-green-600 hover:underline">documentation</a>.</p>
             </div>
         </section>
 
         <!-- Call to Action Section -->
-        <section id="register" class="py-20 bg-green-800 text-white">
-            <div class="container mx-auto px-6 text-center">
+        <section id="register" class="py-16 md:py-20 bg-green-800 text-white">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
                  <h2 class="text-3xl md:text-4xl font-bold">Can You Conquer the Red Planet?</h2>
-                 <p class="mt-4 text-lg text-green-200 max-w-2xl mx-auto">
+                 <p class="mt-4 text-base md:text-lg text-green-200 max-w-2xl mx-auto">
                     The Mars Sample Return mission needs the best and brightest. Form your team, accept the challenge, and show us what you've got. The future of space exploration is in your hands.
                  </p>
-                 <div class="mt-8 flex justify-center space-x-4">
-                    <a href="/register" class="bg-white text-green-800 font-bold py-4 px-10 rounded-full text-xl hover:bg-green-100 transition-transform hover:scale-105 inline-block">
+                 <div class="mt-8 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="/register" class="bg-white text-green-800 font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-lg md:text-xl hover:bg-green-100 transition-transform hover:scale-105 inline-block">
                         Register Now
                     </a>
-                    <a href="https://discord.com/invite/ShsPVMzpyW" target="_blank" class="bg-white/20 backdrop-blur-sm text-white font-bold py-4 px-10 rounded-full text-xl hover:bg-white/30 transition-colors">
+                    <a href="https://discord.com/invite/ShsPVMzpyW" target="_blank" class="bg-white/20 backdrop-blur-sm text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-lg md:text-xl hover:bg-white/30 transition-colors">
                         Join our Discord
                     </a>
                  </div>
             </div>
         </section>
-
     </main>
     
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400">
-        <div class="container mx-auto px-6 py-8 text-center">
+        <div class="container mx-auto px-4 sm:px-6 py-8 text-center">
             <p>&copy; 2024 Aerospace Jam. All Rights Reserved.</p>
-            <div class="mt-4">
+            <div class="mt-4 text-sm">
                 <p>Questions? <a href="mailto:mmortens@carrollu.edu" class="text-green-400 hover:underline">mmortens@carrollu.edu</a> or <a href="mailto:henrymartin.co@outlook.com" class="text-green-400 hover:underline">henrymartin.co@outlook.com</a></p>
                 <p class="mt-2">Join our <a href="https://discord.com/invite/ShsPVMzpyW" target="_blank" class="text-green-400 hover:underline">Discord community</a></p>
             </div>
         </div>
     </footer>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
 {% endblock %}
